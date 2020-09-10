@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body v-on:load="fetchusers">
+    <div id="app">
+      <form action="https://sign-me-up-app.herokuapp.com/users" method="POST" target="_blank">
+        <label for="">Name</label>
+        <br class="mobile-break">
+        <input type="text" name="fname" id="" minlength="2"/>
+        <br class="mobile-break">
+        <label for="">Surname</label>
+        <br class="mobile-break">
+        <input type="text" name="lname" id="" minlength="2"/>
+        <br class="mobile-break">
+        <br class="mobile-break">
+        <button type="submit" onclick="refresh()">Add me to the database</button>
+      </form>
+      <h1>
+        Users that have signed up
+      </h1>
+      <div v-for="(user, index) in users" :key="'ing' + index" class="list">
+        <h4 >{{user.ID}}. {{user.Name}} {{user.Surname}}<h4>
+          <hr>
+      </div>
+    </div>
+  </body>
+  <footer> <p> Darko Cvetkovski 2020 &#169;</p></footer>
+  <script src="app.js"></script>
+</html>
