@@ -9,6 +9,9 @@
   </head>
   <body v-on:load="fetchusers">
     <div id="app">
+      <div class="title">
+      <h1 >Sign me up</h1>
+      </div>
       <form action="https://sign-me-up-app.herokuapp.com/users" method="POST" target="_blank">
         <label for="">Name</label>
         <br class="mobile-break">
@@ -26,10 +29,12 @@
       </h1>
       <div v-for="(user, index) in users" :key="'ing' + index" class="list">
         <h4 >{{user.ID}}. {{user.Name}} {{user.Surname}}<h4>
-          <hr>
+          <hr>  
       </div>
+      <footer>
+        <p> Darko Cvetkovski 2020 &#169;</p>
+      </footer>
     </div>
   </body>
-  <footer> <p> Darko Cvetkovski 2020 &#169;</p></footer>
   <script src="app.js"></script>
 </html>
