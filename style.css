@@ -13,11 +13,6 @@ form {
   margin-top: 2em;
 }
 
-footer {
-  font-size: 10px;
-  bottom: 0;
-}
-
 .title {
   text-align: center;
 }
@@ -30,4 +25,32 @@ footer {
 
 form input {
   width: 200px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 15px;
+}
+footer {
+  position: relative;
+}
+
+.bottom-right img {
+  width: 5%;
+  float: right;
+  bottom: 0;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+@media (max-width: 470px) {
+  .bottom-right img {
+    width: 7%;
+  }
 }
