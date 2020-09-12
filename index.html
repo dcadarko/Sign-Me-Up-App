@@ -15,11 +15,11 @@
       <form action="https://sign-me-up-app.herokuapp.com/users" method="POST" target="_blank">
         <label for="">Name</label>
         <br class="mobile-break">
-        <input type="text" name="fname" id="" minlength="2"/>
+        <input type="text" name="fname" id="" pattern=".{2,}" required title="Your name has to be at least 2 characters long"/>
         <br class="mobile-break">
         <label for="">Surname</label>
         <br class="mobile-break">
-        <input type="text" name="lname" id="" minlength="2"/>
+        <input type="text" name="lname" id="" pattern=".{2,}" required title= "Your surname has to be at least 2 characters long"/>
         <br class="mobile-break">
         <br class="mobile-break">
         <button type="submit" onclick="refresh()">Add me to the database</button>
